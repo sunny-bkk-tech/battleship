@@ -1,0 +1,677 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for banner-app-final/controllers/boardCtrl.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">All files</a> / <a href="index.html">banner-app-final/controllers</a> boardCtrl.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">10.67% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>8/75</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/20</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">14.29% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>2/14</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">10.81% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>8/74</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">41x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">41x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// const APIError = require('../helpers/APIError')
+const ApiBoard = require('.././model/boardModel')
+const Helper = require('../conf/helper')
+const mongoose = require('mongoose')
+const Board = mongoose.model('Board')
+const APIError = require('../conf/APIError');
+&nbsp;
+/**
+ * Load board and append to req.
+ */
+function load(req, res, next, id) {
+  Board.get(id)
+    .then(<span class="fstat-no" title="function not covered" >(b</span>oard) =&gt; {
+<span class="cstat-no" title="statement not covered" >      req.board = board</span>
+<span class="cstat-no" title="statement not covered" >      return next()</span>
+    })
+    .catch(e =&gt; next(new APIError(e)))
+}
+&nbsp;
+/**
+ * Get board
+ * @returns {Board}
+ */
+function <span class="fstat-no" title="function not covered" >get(</span>req, res) {
+  const board = <span class="cstat-no" title="statement not covered" >req.board</span>
+  const type = <span class="cstat-no" title="statement not covered" >req.query.type</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  if (type === 'attacker') {</span>
+    // if attacker, it should delete secret position
+<span class="cstat-no" title="statement not covered" >    for (let i = 0; i &lt; board.ships.length; i++) {</span>
+      const keys = <span class="cstat-no" title="statement not covered" >Object.keys(board.ships[i].cors)</span>
+<span class="cstat-no" title="statement not covered" >      for (let j = 0; j &lt; keys.length; j++) {</span>
+        const isFired = <span class="cstat-no" title="statement not covered" >board.ships[i].cors[keys[j]]</span>
+<span class="cstat-no" title="statement not covered" >        if (!isFired) {</span>
+<span class="cstat-no" title="statement not covered" >          delete board.ships[i].cors[keys[j]]</span>
+        }
+      }
+    }
+  }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  return res.json(board)</span>
+}
+&nbsp;
+/**
+ * Create new board
+ * @returns {Board}
+ */
+function <span class="fstat-no" title="function not covered" >create(</span>req, res, next) {
+  const squreGrid = <span class="cstat-no" title="statement not covered" >10 </span>// default grid 10x10
+  const board = <span class="cstat-no" title="statement not covered" >new Board({</span>
+    square_grid: squreGrid
+  })
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  board.save()</span>
+    .then(<span class="fstat-no" title="function not covered" >sa</span>vedBoard =&gt; <span class="cstat-no" title="statement not covered" >res.json(savedBoard))</span>
+}
+&nbsp;
+/**
+ * Get board list.
+ * @property {number} req.query.skip - Number of boards to be skipped.
+ * @property {number} req.query.limit - Limit number of boards to be returned.
+ * @returns {Board[]}
+ */
+function <span class="fstat-no" title="function not covered" >list(</span>req, res, next) {
+  const { limit = <span class="branch-0 cbranch-no" title="branch not covered" >50,</span> skip = <span class="branch-0 cbranch-no" title="branch not covered" >0 </span>} = <span class="cstat-no" title="statement not covered" >req.query</span>
+<span class="cstat-no" title="statement not covered" >  Board.list({</span>
+    limit,
+    skip
+  })
+    .then(<span class="fstat-no" title="function not covered" >bo</span>ards =&gt; <span class="cstat-no" title="statement not covered" >res.json(boards))</span>
+    .catch(<span class="fstat-no" title="function not covered" >e </span>=&gt; <span class="cstat-no" title="statement not covered" >next(new APIError(e)))</span>
+}
+&nbsp;
+/**
+ * Delete board.
+ * @returns {Board}
+ */
+function <span class="fstat-no" title="function not covered" >remove(</span>req, res, next) {
+  const board = <span class="cstat-no" title="statement not covered" >req.board</span>
+<span class="cstat-no" title="statement not covered" >  board.remove().then(<span class="fstat-no" title="function not covered" >de</span>letedBoard =&gt; <span class="cstat-no" title="statement not covered" >res.json({board: deletedBoard, message: "Game is successfully Reset"}))</span></span>
+    .catch(<span class="fstat-no" title="function not covered" >e </span>=&gt; <span class="cstat-no" title="statement not covered" >next(new APIError(e)))</span>
+}
+&nbsp;
+/**
+ * placeShip
+ * @returns {Board}
+ */
+async function <span class="fstat-no" title="function not covered" >placeShip(</span>req, res, next) {
+  const board = <span class="cstat-no" title="statement not covered" >req.board</span>
+  const body = <span class="cstat-no" title="statement not covered" >req.body</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  if (board.state === 3) {</span>
+<span class="cstat-no" title="statement not covered" >    res.json({</span>
+      error: true,
+      message: 'Game Finished.'
+    })
+<span class="cstat-no" title="statement not covered" >    return</span>
+  }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  if (board.state === 2) {</span>
+<span class="cstat-no" title="statement not covered" >    res.json({</span>
+      error: true,
+      message: 'Game is Ready.'
+    })
+<span class="cstat-no" title="statement not covered" >    return</span>
+  }
+&nbsp;
+  // get ship from type
+  const ship = <span class="cstat-no" title="statement not covered" >Helper.getShip(body.type)</span>
+&nbsp;
+  // check type ship should not more than 1x Battleship, 2x Cruisers, 3x Destroyers and 4x Submarines.
+  const isNotLimitExeeded = <span class="cstat-no" title="statement not covered" >Helper.checkLimitShipsInBoard(board.ships, ship.type)</span>
+<span class="cstat-no" title="statement not covered" >  if (!isNotLimitExeeded) {</span>
+<span class="cstat-no" title="statement not covered" >    res.json({</span>
+      error: true,
+      message: `${ship.type} limit exceeded.`
+    })
+<span class="cstat-no" title="statement not covered" >    return</span>
+  }
+&nbsp;
+  // get all cors cells from start and l and direction
+  const cors = <span class="cstat-no" title="statement not covered" >Helper.getCors(body, ship)</span>
+<span class="cstat-no" title="statement not covered" >  ship.cors = cors </span>// set cors to ship
+&nbsp;
+  // check ship over grid
+  const isOver = <span class="cstat-no" title="statement not covered" >Helper.isShipOverGrid(board.square_grid, ship.cors)</span>
+<span class="cstat-no" title="statement not covered" >  if (isOver) {</span>
+<span class="cstat-no" title="statement not covered" >    res.json({</span>
+      error: true,
+      message: 'ship position is over grid.'
+    })
+<span class="cstat-no" title="statement not covered" >    return</span>
+  }
+&nbsp;
+  // check ship exists or adjacent cells
+  const isAdjacent = <span class="cstat-no" title="statement not covered" >Helper.isAdjacent(board.ships, ship.cors)</span>
+<span class="cstat-no" title="statement not covered" >  if (isAdjacent) {</span>
+<span class="cstat-no" title="statement not covered" >    res.json({</span>
+      error: true,
+      message: 'The ship is adjacent.'
+    })
+<span class="cstat-no" title="statement not covered" >    return</span>
+  }
+&nbsp;
+  // pass all cases
+<span class="cstat-no" title="statement not covered" >  board.ships.push(ship)</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  board.state = 1 </span>// inprogress
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  if (board.ships.length === 10) {</span>
+<span class="cstat-no" title="statement not covered" >    board.state = 2 </span>// ready to fire
+  }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  try {</span>
+<span class="cstat-no" title="statement not covered" >    await board.save()</span>
+  } catch (e) {
+<span class="cstat-no" title="statement not covered" >    return next()</span>
+  }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  res.json({</span>
+    message: 'placed',
+    shipType: ship.name
+&nbsp;
+  })
+}
+&nbsp;
+/**
+ * Attacker fire the ship.
+ * @returns {Promise&lt;String, APIError&gt;} text -
+ */
+async function <span class="fstat-no" title="function not covered" >fire(</span>req, res, next) {
+  const board = <span class="cstat-no" title="statement not covered" >req.board</span>
+  const cell = <span class="cstat-no" title="statement not covered" >req.body.fire</span>
+  // check pattern of cell
+  const reg = <span class="cstat-no" title="statement not covered" >new RegExp(/(\d+)x(\d+)/, 'g')</span>
+<span class="cstat-no" title="statement not covered" >  if (!reg.test(cell)) {</span>
+<span class="cstat-no" title="statement not covered" >    return next(new APIError('Bad request fire should be NUMBERxNUMBER', 400))</span>
+  }
+<span class="cstat-no" title="statement not covered" >  board.fired.push(cell)</span>
+&nbsp;
+  // Get result and set field in board object
+  const result = <span class="cstat-no" title="statement not covered" >Helper.fireAndGetSituation(board, cell)</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  try {</span>
+<span class="cstat-no" title="statement not covered" >    board.markModified('ships') </span>// update mixed type in mongoose
+<span class="cstat-no" title="statement not covered" >    await board.save()</span>
+  } catch (e) {
+<span class="cstat-no" title="statement not covered" >    return next(new APIError(e))</span>
+  }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  return res.json({</span>
+    message: result
+  })
+}
+&nbsp;
+module.exports = {
+  load,
+  get,
+  create,
+  list,
+  remove,
+  placeShip,
+  fire
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Jul 18 2019 23:14:27 GMT+0700 (Indochina Time)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

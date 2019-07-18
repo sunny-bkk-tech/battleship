@@ -1,0 +1,776 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for banner-app-final/conf/helper.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">All files</a> / <a href="index.html">banner-app-final/conf</a> helper.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">81.11% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>73/90</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">62.5% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>25/40</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">81.82% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>9/11</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">81.61% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>71/87</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const _ = require('lodash')
+&nbsp;
+class Helper {
+  /**
+   * get XY
+   * @properties {string} cor - e.g. 1x1 {x}x{y}
+   * @returns {object} xy
+   */
+  static _getXY (at) {
+    // Example at = 1x1
+    const xy = at.split('x')
+    return {
+      x: +xy[0], // parseInt
+      y: +xy[1] // parseInt
+    }
+  }
+&nbsp;
+  /**
+   * Is ship adjacent to others?
+   * if 2x2 then adjacents are 1x1, 1x2, 2x2, 3x2, 2x3, 3x3
+   * @properties {string} board.square_grid - size of grid
+   * @properties {object} ship.cors
+   * @returns {object} True is adjacent(cannot place this ship). Otherwise false
+   */
+  static isAdjacent (ships, cors) {
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (!ships.length) {
+<span class="cstat-no" title="statement not covered" >      return false</span>
+    }
+    let totalCors = {}
+    // loop get all cors from old ships
+    for (let i = 0; i &lt; ships.length; i++) {
+      const oldShip = ships[i]
+      Object.assign(totalCors, oldShip.cors)
+    }
+&nbsp;
+    // add adjacents cell from all cors to totalCors
+    let keys = Object.keys(totalCors)
+    for (let i = 0; i &lt; keys.length; i++) {
+      let { x, y } = Helper._getXY(keys[i])
+      totalCors[`${x - 1}x${y - 1}`] = false
+      totalCors[`${x - 1}x${y}`] = false
+      totalCors[`${x}x${y - 1}`] = false
+      totalCors[`${x + 1}x${y + 1}`] = false
+      totalCors[`${x + 1}x${y}`] = false
+      totalCors[`${x}x${y + 1}`] = false
+      totalCors[`${x - 1}x${y + 1}`] = false
+      totalCors[`${x + 1}x${y - 1}`] = false
+    }
+&nbsp;
+    // check new ship exists in totalCors or not
+    keys = Object.keys(cors)
+    for (let i = 0; i &lt; keys.length; i++) {
+      const key = keys[i]
+      if (typeof totalCors[key] !== 'undefined') {
+        // if exists return true. its Adjacent
+        return true
+      }
+    }
+    return false
+  }
+&nbsp;
+  /**
+   * Is ship over square grid?
+   * @properties {string} board.square_grid - size of grid
+   * @properties {object} ship.cors
+   * @returns {object} True is overgrid(cannot place this ship). Otherwise false
+   */
+  static isShipOverGrid (grid, cors) {
+    // loop go from last items
+    const keys = Object.keys(cors)
+    for (var i = keys.length - 1; i &gt;= 0; i--) {
+      const cor = keys[i]
+      let { x, y } = Helper._getXY(cor)
+      if (x &gt; grid || y &gt; grid || x &lt; 0 || y &lt; 0) {
+        return true
+      }
+    }
+    return false
+  }
+&nbsp;
+  /**
+   * Get cors by start, length and direction
+   * Example1 start=1x1 length=4, direction=vertical
+   * It will get 1x1 1x2 1x3 1x4
+   * Example2 start=1x1 length=4, direction=horizontal
+   * It will get 1x1 2x1 3x1 4x1
+   * @properties {string} body.at - cors pattern {x}x{y} e.g. 1x1
+   * @properties {string} body.direction - enum('horizontal', 'vertical')
+   * @properties {number} ship.l - length of ship
+   * @returns {object} key is cors (1x1), value is boolean True is fired. Otherwise false
+   */
+  static getCors ({ at, direction }, { l }) {
+    const cors = {}
+    cors[at] = false
+&nbsp;
+    // Example at = 1x1
+    let { x, y } = Helper._getXY(at)
+&nbsp;
+    let getCor = null
+    if (direction === 'horizontal') {
+      getCor = () =&gt; `${++x}x${y}`
+    } else {
+      getCor = () =&gt; `${x}x${++y}`
+    }
+&nbsp;
+    for (let i = 0; i &lt; l - 1; i++) {
+      cors[getCor()] = false
+    }
+    return cors
+  }
+&nbsp;
+  /**
+   * The limit are
+   * 1x Battleship, 2x Cruisers, 3x Destroyers and 4x Submarines.
+   * @param {Object[]} ships - array of ship
+   * @param {number} type - type of ship
+   * @returns {boolean} True is the ship can put into board. Otherwise false
+   */
+<span class="fstat-no" title="function not covered" >  st</span>atic checkLimitShipsInBoard (ships, type) {
+<span class="cstat-no" title="statement not covered" >    if (!ships.length) {</span>
+      // if no ship in board then true
+<span class="cstat-no" title="statement not covered" >      return true</span>
+    }
+    const groupByType = <span class="cstat-no" title="statement not covered" >_.groupBy(ships, <span class="fstat-no" title="function not covered" >sh</span>ip =&gt; <span class="cstat-no" title="statement not covered" >ship.type)</span></span>
+    let limit
+<span class="cstat-no" title="statement not covered" >    if (type === 1) {</span>
+<span class="cstat-no" title="statement not covered" >      limit = 1</span>
+    } else <span class="cstat-no" title="statement not covered" >if (type === 2) {</span>
+<span class="cstat-no" title="statement not covered" >      limit = 2</span>
+    } else <span class="cstat-no" title="statement not covered" >if (type === 3) {</span>
+<span class="cstat-no" title="statement not covered" >      limit = 3</span>
+    } else <span class="cstat-no" title="statement not covered" >if (type === 4) {</span>
+<span class="cstat-no" title="statement not covered" >      limit = 4</span>
+    }
+    // 0 &lt; 2 true
+    // 1 &lt; 2 true
+    // 2 &lt; 2 false
+    // 3 &lt; 2 false
+    let amount = <span class="cstat-no" title="statement not covered" >groupByType[type] ? groupByType[type].length : 0</span>
+<span class="cstat-no" title="statement not covered" >    return amount &lt; limit</span>
+  }
+&nbsp;
+  /**
+   * get ship
+   *
+   * @param {number} type - type of ship
+   * @returns {string} ship.name - name of ship
+   * @returns {number} ship.l - length of ship
+   */
+  static getShip (type) {
+    switch (type) {
+      case 1:
+        return {
+          type,
+          name: 'Battleship',
+          l: 4
+        }
+      case 2:
+        return {
+          type,
+          name: 'Cruiser',
+          l: 3
+        }
+      case 3:
+        return {
+          type,
+          name: 'Destroyer',
+          l: 2
+        }
+      case 4:
+        return {
+          type,
+          name: 'Submarine',
+          l: 1
+        }
+    }
+  }
+&nbsp;
+  /**
+   * private function get situations
+   *
+   * @param {Number} num - number of situation
+   * @param {string} x - name of ship or number of moves
+   * @returns {string} text - situation after fired
+   */
+  static _getSituation (num, x) {
+    switch (num) {
+      case 0:
+        return 'Miss'
+      case 1:
+        return 'Hit'
+      case 2:
+        return `You just sank the ${x}`
+      case 3:
+        return `Win ! You completed the game in ${x} moves`
+    }
+  }
+&nbsp;
+&nbsp;
+  static fireAndGetSituation (board, cellFired) {
+    const ships = board.ships
+    for (let i = 0; i &lt; ships.length; i++) {
+      const ship = ships[i]
+      // if ship destroyed continue to next ship
+      <span class="missing-if-branch" title="if path not taken" >I</span>if (ship.destroyed) {
+<span class="cstat-no" title="statement not covered" >        continue</span>
+      }
+      // if matched cors key in ship (it HITS)
+      if (typeof ship.cors[cellFired] !== 'undefined') {
+        ship.cors[cellFired] = true
+&nbsp;
+        // checking Is this ship destroyed?
+        const keys = Object.keys(ship.cors)
+        ship.destroyed = true
+        // if all cell of ship are false
+        for (let j = 0; j &lt; keys.length; j++) {
+          const key = keys[j]
+          if (!ship.cors[key]) {
+            ship.destroyed = false
+            // JUST hit not destroyed
+            return Helper._getSituation(1)
+          }
+        }
+        board.ship_destroyed += 1
+        <span class="missing-if-branch" title="else path not taken" >E</span>if (board.ship_destroyed === ships.length) {
+          board.state = 3 // state done
+          return Helper._getSituation(3, board.fired.length)
+        }
+        // SHIP Destroyed
+<span class="cstat-no" title="statement not covered" >        return Helper._getSituation(2, ship.name)</span>
+      }
+    }
+    return Helper._getSituation(0)
+  }
+}
+&nbsp;
+module.exports = Helper
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Jul 18 2019 23:14:27 GMT+0700 (Indochina Time)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>
